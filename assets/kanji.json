@@ -1,0 +1,20 @@
+{
+    "kanjis": [
+        {
+            "radical": "日",
+            "hint": {
+                "hanviet": "Nhật",
+                "kun": " ひ、 -び、 -か",
+                "on": "ニチ、 ジツ"
+            }
+        },
+        {
+            "radical": "一",
+            "hint": {
+                "hanviet": "Nhất",
+                "kun": "ひと-、 ひと.つ",
+                "on": " イチ、 イツ"
+            }
+        }
+    ]
+}
