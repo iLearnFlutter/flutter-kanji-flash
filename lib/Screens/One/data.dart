@@ -12,18 +12,18 @@ class KanjiData {
 }
 
 class HintData {
-  final String hanviet;
-  final String kun;
-  final String on;
+  final List<String> hanviet;
+  final List<String> kun;
+  final List<String> on;
   HintData(this.hanviet, this.kun, this.on);
   HintData.fromJson(Map<String, dynamic> parsedJson)
-      : hanviet = parsedJson['hanviet'],
-        kun = parsedJson['kun'],
-        on = parsedJson['on'];
+      : hanviet = List<String>.from(parsedJson['hanviet']),
+        kun = List<String>.from(parsedJson['kun']),
+        on = List<String>.from(parsedJson['on']);
 }
 
 class DataListBuilder {
-  static const String DEFAULT_KANJI_JSON_ASSET = "assets/kanji.json";
+  static const String DEFAULT_KANJI_JSON_ASSET = "assets/kanjis.json";
   static Future<String> _loadFromAsset() {
     return rootBundle.loadString(DEFAULT_KANJI_JSON_ASSET);
   }

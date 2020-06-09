@@ -29,12 +29,11 @@ class OneScreenState extends State<OneScreen> with TickerProviderStateMixin {
                           {{ _kanji }}
                       </main>
                       <footer>
-                        
                         <table>
                           <colgroup>
-                            <col width="35%" />
-                            <col width="25%" />
-                            <col width="30%" />
+                            <col width="10%" />
+                            <col width="20%" />
+                            <col width="50%" />
                             <col width="10%" />
                         </colgroup>
                             <tr>
@@ -68,9 +67,9 @@ class OneScreenState extends State<OneScreen> with TickerProviderStateMixin {
     } else {
       return HTML_DATA_HINT
           .replaceFirst('{{ _kanji }}', kanji?.radical ?? '')
-          .replaceFirst('{{ _hanviet }}', kanji?.hint?.hanviet ?? '')
-          .replaceFirst('{{ _kun }}', kanji?.hint?.kun ?? '')
-          .replaceFirst('{{ _on }}', kanji?.hint?.on ?? '');
+          .replaceFirst('{{ _hanviet }}', kanji?.hint?.hanviet.toString() ?? '')
+          .replaceFirst('{{ _kun }}', kanji?.hint?.kun.toString() ?? '')
+          .replaceFirst('{{ _on }}', kanji?.hint?.on.toString() ?? '');
     }
   }
 
